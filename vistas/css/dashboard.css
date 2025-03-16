@@ -1,0 +1,144 @@
+/*--------- Estilos generales---------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.dashboard-container {
+    background-color: #008ac4;
+    /* Color similar al de la imagen ejemplo */
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    /*relleno*/
+    text-align: center;
+    width: 70%;
+    /*Ancho */
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    /* importante para que h1 se posicione respecto a este div */
+    /* para posicionar elementos hijos absolutamente */
+    min-height: 400px;
+    /* altura mínima para posicionar internamente elementos */
+
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+    /* ajusta el tamaño según lo grande que desees el texto */
+    position: absolute;
+    /* te permite mover libremente el elemento */
+    bottom: 40px;
+    /* ajusta esta distancia según tu preferencia */
+    left: 40px;
+    /* ajusta esta distancia según tu preferencia */
+    margin-bottom: 20px;
+    margin: 0;
+    /* Elimina márgenes automáticos para mover hacia arriba */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+}
+
+.nombre-usuario {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #eaff00;
+}
+
+.mensaje-motivacional {
+    font-family: 'Poppins', sans-serif;
+    /* fuente personalizada */
+    position: absolute;
+    /* te permite colocarlo libremente */
+    top: 40px;
+    /* ajusta la posición vertical */
+    right: 40px;
+    /* ajusta la posición horizontal hacia la derecha */
+    color: #fff;
+    font-size: 2.5em;
+    /* ajusta tamaño según prefieras */
+    text-align: right;
+    /* alineado hacia la derecha para una mejor estética */
+    line-height: 1.4;
+    /* espacio entre líneas más atractivo visualmente */
+}
+
+.icono-celebracion {
+    position: absolute;
+    right: 50px;
+    /* alinea con tu párrafo motivacional */
+    bottom: 200px;
+    /* debajo del párrafo, ajusta si necesitas */
+    font-size: 50px;
+    /* tamaño cómodo y visible */
+    color: #ffeb3b;
+    /* color llamativo */
+}
+
+.icono-animado {
+    font-size: 60px;
+    color: #ffeb3b;
+    animation: float 2s ease-in-out infinite;
+    margin-bottom: 20px;
+    text-align: left;
+    left: 50px;
+    bottom: 300px;
+    position: absolute;
+}
+
+@keyframes float {
+    /* Esta "clase" controla el movimiento o la tranformación de la animación, "transfirm" es la propiedad 
+    general para mover o transformar elementos en CSS */
+
+    0%,
+    /* posición original (inicio(o) y final(100)) */
+    100% {
+        transform: translateY(0px);
+        /*Si quieres que el icono suba más, pon número negativo */
+        /* posición inicial y final */
+    }
+
+    /*(50%) movimiento hacia arriba intermedio */
+    50% {
+        transform: translateY(-10px);
+        /*Si quieres que baje más, pon un número positivo */
+        /* posición intermedia: sube 10px */
+    }
+}
+
+.button-foro {
+    position: absolute;
+    /* Posición absoluta (se mueve libremente respecto al padre) */
+    bottom: 20px;
+    /* 20 píxeles desde abajo */
+    left: 50%;
+    /* Se mueve al 50% desde la izquierda del contenedor */
+    transform: translateX(-50%);
+    /* Esto lo centra exactamente en medio horizontalmente */
+
+}
+
+.button-foro .button {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.button-foro .button:hover {
+    background-color: #444;
+}

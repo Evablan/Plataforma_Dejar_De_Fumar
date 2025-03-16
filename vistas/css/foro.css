@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f9fc;
+    padding: 0;
+    margin: 0;
+}
+
+#mensajes {
+    /*estilos aqui*/
+    height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.mensaje {
+    background-color: #f2f7ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

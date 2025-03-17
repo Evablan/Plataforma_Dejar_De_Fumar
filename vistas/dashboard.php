@@ -2,10 +2,10 @@
 require_once '../lib/GestorSesiones.php';
 
 session_start();
-<<<<<<< HEAD
+
 /*$usuario = gestorSesiones::obtenerUsuario();*/
 /*$usuario = "Raquel";
-=======
+
 
 /*if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
@@ -18,13 +18,12 @@ session_start();
 if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
     exit();
-<<<<<<< HEAD
+
 }
 */
-=======
-}*/
 
->>>>>>> 436c71b (Restaurando el repositorio)
+
+
 // Obtiene el nombre del usuario de la sesión
 $usuario = $_SESSION['usuario'];
 ?>
@@ -48,36 +47,34 @@ $usuario = $_SESSION['usuario'];
             <i class="fa-solid fa-face-smile-beam"></i>
         </div>
 
-<<<<<<< HEAD
         <h1>Bienvenida,<br>
-=======
-        <h1>Bienvenido/a,<br>
->>>>>>> 436c71b (Restaurando el repositorio)
-            <span class="nombre-usuario"><?php echo htmlspecialchars($usuario); ?></span>!
-        </h1>
-        <p class="mensaje-motivacional">
-            Sigue así, cada día<br>cuenta!
-        </p>
-        <div class="icono-celebracion">
-            <i class="fa-solid fa-gift"></i>
-        </div>
 
-<<<<<<< HEAD
-        <div class="button-foro">
-            <button type="submit" class="button">Foro</button>
-        </div>
-    </div>
-=======
-        <div class="button-container">
+            <h1>Bienvenido/a,<br>
 
-            <a href="foro.php" class="button">Foro</a>
-            <a href="blog.php" class="button">Blog</a>
+                <span class="nombre-usuario"><?php echo htmlspecialchars($usuario); ?></span>!
+            </h1>
+            <p class="mensaje-motivacional">
+                Sigue así, cada día<br>cuenta!
+            </p>
+            <div class="icono-celebracion">
+                <i class="fa-solid fa-gift"></i>
+            </div>
 
-        </div>
+
+            <div class="button-foro">
+                <button type="submit" class="button">Foro</button>
+            </div>
     </div>
 
+    <div class="button-container">
 
->>>>>>> 436c71b (Restaurando el repositorio)
+        <a href="foro.php" class="button">Foro</a>
+        <a href="blog.php" class="button">Blog</a>
+
+    </div>
+    </div>
+
+
 </body>
 
 </html>

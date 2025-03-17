@@ -4,29 +4,21 @@ require_once '../lib/GestorSesiones.php';
 session_start();
 
 /*$usuario = gestorSesiones::obtenerUsuario();*/
-/*$usuario = "Raquel";
+/*$usuario = "Raquel";*/
 
-
-/*if (!isset($_SESSION['usuario'])) {
-    header("Location: login.php");
-    exit();
-}
-
-//$usuario = gestorSesiones::obtenerUsuario();
->>>>>>> 436c71b (Restaurando el repositorio)
-
+/*
 if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
     exit();
-
 }
-*/
+
 
 
 
 // Obtiene el nombre del usuario de la sesión
-$usuario = $_SESSION['usuario'];
+$usuario = $_SESSION['usuario'];*/
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

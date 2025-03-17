@@ -13,6 +13,7 @@
 <body>
     <?php include 'vistas/includes/header.php'; ?>
     <?php include 'vistas/includes/footer.php'; ?>
+    <?php echo ("hola mundo")?>
 </body>
 
 </html>

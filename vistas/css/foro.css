@@ -6,7 +6,10 @@ body {
 }
 
 #mensajes {
+<<<<<<< HEAD
     /*estilos aqui*/
+=======
+>>>>>>> 436c71b (Restaurando el repositorio)
     height: 400px;
     overflow-y: auto;
     padding: 20px;
@@ -19,4 +22,31 @@ body {
     margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+<<<<<<< HEAD
+=======
+}
+
+.fecha {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 5px;
+}
+
+#formulario-mensaje {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#mensaje {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+#formulario-mensaje input[type="text"]:focus {
+    border-color: #78aaff;
+>>>>>>> 436c71b (Restaurando el repositorio)
 }

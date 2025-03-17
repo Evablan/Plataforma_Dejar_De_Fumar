@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <?php 
 require_once '../modelos/config.php'; // Asegúrate de que la ruta es correcta
 
+=======
+?>
+
+
+>>>>>>> 436c71b (Restaurando el repositorio)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST['nombre'];
     $edad = $_POST['edad'];
@@ -21,9 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sisssisssss", $nombre, $edad, $email, $contrasena, $tabaco, $cantidad, $dejar, $apoyo, $razon, $actividades, $salud);
 
     if ($stmt->execute()) {
+<<<<<<< HEAD
         session_start(); // Iniciar la sesión
         $_SESSION['usuario'] = $nombre; // Guardar el nombre en la sesión
     
+=======
+        session_start();
+        $_SESSION['usuario'] = $nombre; // Guardar el nombre en la sesión
+>>>>>>> 436c71b (Restaurando el repositorio)
         header("Location: ../vistas/login.php"); // Redirigir al login
         exit();
     } else {
@@ -32,5 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $stmt->close();
     $conn->close();
+<<<<<<< HEAD
 } 
 ?>
+=======
+}
+>>>>>>> 436c71b (Restaurando el repositorio)

@@ -7,6 +7,10 @@
     <title>Foro - Plataforma motivacional</title>
     <link rel="stylesheet" href="foro.css">
     <link rel="stylesheet" href="css/foro.css">
+
+    <link rel="stylesheet" href="css/foro.css">
+    <script src="../assets/js/foro.js"></script>
+
     <!--Aquí va el link para enlazar a foro.js-->
 
 </head>
@@ -25,7 +29,7 @@
 
         </form>
     </div>
-    <!--Aquí va el script-->
+
 
 </body>
 

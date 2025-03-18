@@ -33,3 +33,20 @@ function cargarMensajes() {
         })
         .catch(error => console.error('Error al cargar mensajes:', error)); // Si hay un error lo mostramos en la consla
 }
+
+function enviarMensaje() {
+    const formData = new formData(document.getElementById("formulario-mensaje"));
+    //Obtiene el texto que envió el usuario
+
+    fetch('guardarMensaje.php', {
+        method: 'POST',
+        body: formData('formulario-mensaje')
+    })
+        .then(reponse => reponse.text())
+        .then(data => {
+            document.getElementById('mensaje').value = '';
+            cargarMensajes() //Actualizar mensajes tras enviar uno nuevo    
+        })
+        .catch(error => console.error('Error al enviar mensaje ', error));
+
+}

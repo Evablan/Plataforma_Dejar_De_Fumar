@@ -44,7 +44,6 @@ $usuario = isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) 
         <div class="button-container">
             <a href="foro.php" class="button">Foro</a>
             <a href="blog.php" class="button">Blog</a>
-            <a href="../controladores/usuarioControlador.php?logout" class="button">Cerrar sesión</a>
         </div>
     </div>
 </body>

@@ -115,21 +115,7 @@ h1 {
     }
 }
 
-<<<<<<< HEAD
-.button-foro {
-    position: absolute;
-    /* Posición absoluta (se mueve libremente respecto al padre) */
-    bottom: 20px;
-    /* 20 píxeles desde abajo */
-    left: 50%;
-    /* Se mueve al 50% desde la izquierda del contenedor */
-    transform: translateX(-50%);
-    /* Esto lo centra exactamente en medio horizontalmente */
 
-}
-
-.button-foro .button {
-=======
 
 .button-container {
     display: flex;
@@ -153,7 +139,6 @@ h1 {
 
 .button {
 
->>>>>>> 436c71b (Restaurando el repositorio)
     padding: 12px 25px;
     font-size: 16px;
     background-color: black;
@@ -165,10 +150,7 @@ h1 {
     transition: background-color 0.3s;
 }
 
-<<<<<<< HEAD
 .button-foro .button:hover {
-=======
-.button:hover {
->>>>>>> 436c71b (Restaurando el repositorio)
+
     background-color: #444;
 }

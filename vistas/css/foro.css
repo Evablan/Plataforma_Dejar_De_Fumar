@@ -6,10 +6,9 @@ body {
 }
 
 #mensajes {
-<<<<<<< HEAD
+
     /*estilos aqui*/
-=======
->>>>>>> 436c71b (Restaurando el repositorio)
+
     height: 400px;
     overflow-y: auto;
     padding: 20px;
@@ -22,8 +21,8 @@ body {
     margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-<<<<<<< HEAD
-=======
+
+
 }
 
 .fecha {
@@ -48,5 +47,5 @@ body {
 
 #formulario-mensaje input[type="text"]:focus {
     border-color: #78aaff;
->>>>>>> 436c71b (Restaurando el repositorio)
+
 }

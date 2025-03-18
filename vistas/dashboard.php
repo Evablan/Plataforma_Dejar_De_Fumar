@@ -39,23 +39,20 @@ $usuario = $_SESSION['usuario'];*/
             <i class="fa-solid fa-face-smile-beam"></i>
         </div>
 
-        <h1>Bienvenida,<br>
-
-            <h1>Bienvenido/a,<br>
-
-                <span class="nombre-usuario"><?php echo htmlspecialchars($usuario); ?></span>!
-            </h1>
-            <p class="mensaje-motivacional">
-                Sigue así, cada día<br>cuenta!
-            </p>
-            <div class="icono-celebracion">
-                <i class="fa-solid fa-gift"></i>
-            </div>
 
 
-            <div class="button-foro">
-                <button type="submit" class="button">Foro</button>
-            </div>
+        <h1>Bienvenido/a,<br>
+
+            <span class="nombre-usuario"><?php echo htmlspecialchars($usuario); ?></span>!
+        </h1>
+        <p class="mensaje-motivacional">
+            Sigue así, cada día<br>cuenta!
+        </p>
+        <div class="icono-celebracion">
+            <i class="fa-solid fa-gift"></i>
+        </div>
+
+
     </div>
 
     <div class="button-container">

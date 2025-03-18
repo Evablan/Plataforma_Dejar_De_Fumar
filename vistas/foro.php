@@ -25,7 +25,8 @@
         </div>
         <form id="formulario-mensaje">
             <input type="text" id="mensaje" name="mensaje" placeholder="Escribe tu testimonio aquí..." require>
-            <button type="submit">Enviar</button>
+            <button type="submit" class="boton-enviar">Enviar</button>
+            <a href="../index.php" class="boton-foro">Volver al incio</a>
 
         </form>
     </div>

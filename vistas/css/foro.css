@@ -49,3 +49,37 @@ body {
     border-color: #78aaff;
 
 }
+
+/*------------- BOTÓN DE REEDIRECCIÓN A LA PÁGINA DE INICIO (index)--------*/
+
+.boton-foro {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008FA5;
+    /* Color similar al de tu diseño */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background 0.3s;
+}
+
+.boton-foro:hover {
+    background-color: #006f82;
+}
+
+.boton-enviar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008FA5;
+    /* Color similar al de tu diseño */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background 0.3s;
+}
+
+.boton-enviar:hover {
+    background-color: #006f82;
+}

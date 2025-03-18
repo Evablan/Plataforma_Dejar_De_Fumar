@@ -1,13 +1,10 @@
 <?php
-session_start(); // Iniciar sesión
-
-// Verificar si el usuario está en sesión antes de usar la variable
+session_start();
 if (!isset($_SESSION['usuario'])) {
     header("Location: login.php");
     exit();
 }
 
-// Asignar el usuario a una variable segura
 $usuario = isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) : 'Usuario Desconocido';
 ?>
 
@@ -20,7 +17,7 @@ $usuario = isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) 
     <title>Panel de motivación y seguimiento</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="../vistas/css/dashboard.css">
 </head>
 
 <body>
@@ -44,6 +41,7 @@ $usuario = isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) 
         <div class="button-container">
             <a href="foro.php" class="button">Foro</a>
             <a href="blog.php" class="button">Blog</a>
+            <a href="../controladores/cerrar_sesion.php" class="button logout">Cerrar Sesión</a>
         </div>
     </div>
 </body>

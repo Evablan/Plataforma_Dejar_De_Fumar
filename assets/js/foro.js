@@ -12,8 +12,8 @@ setInterval(cargarMensajes, 5000);
 //Creamos la función cargarMensajes() --obtiene los mensajes del servidor y los muestra en el chat
 
 function cargarMensajes() {
-    fetch('obtenerMensajes.php') //Pedimos los mensajes al servidor
-        .then(reponse => reponse.json())// Convertimos respuesta a formato JSON
+    fetch('controladores/foroControlador.php')//Pedimos los mensajes al servidor
+        .then(response => response.json())// Convertimos respuesta a formato JSON
         .then(mensajes => {
 
 
@@ -25,7 +25,7 @@ function cargarMensajes() {
             mensajes.forEach(msg => {
                 const div = document.createElement('div'); //Creamos un nuevo div para cada mensaje
                 div.classList.add('mensaje'); //Le damos la clase CSS 'mensajes'
-                div.innerHTML = `<strong> ${msg.fecha}</strong>: ${msg.contenido}`; //Mostramos la fecha y el texto
+                div.innerHTML = `<strong> ${msg.fecha}</strong>: ${msg.contenido}`; //${msg.mensaje} cambiar (para que coincida con la BD)
                 contenedor.appendChild(div); //Agregamos el mensaje al área de mensajes
 
             });
@@ -35,10 +35,10 @@ function cargarMensajes() {
 }
 
 function enviarMensaje() {
-    const formData = new formData(document.getElementById("formulario-mensaje"));
+    const formData = new FormData(document.getElementById("formulario-mensaje"));
     //Obtiene el texto que envió el usuario
 
-    fetch('guardarMensaje.php', {
+    fetch('controladores/foroControlador.php', {// Se ajusta la ruta al archivo dentro de la carpeta 'controladores'
         method: 'POST',
         body: formData('formulario-mensaje')
     })

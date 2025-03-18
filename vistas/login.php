@@ -1,39 +1,38 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../vistas/css/login.css">
+    <link rel="stylesheet" href="../vistas/css/login.css"> <!-- Estilo si lo tienes -->
 </head>
-
 <body>
-    <div class="inicio">
-        <h1>Inicio de Sesión</h1>
-        <p>¿Es tu primera vez? <a href="registro.php">Regístrate</a></p>
 
-        <form action="../controladores/procesar_login.php" method="POST">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
+    <div class="login-container">
+        <h2>Iniciar sesión</h2>
 
-            <label for="contrasena">Contraseña</label>
-            <input type="password" id="contrasena" name="contrasena" required autocomplete="current-password">
+        <!-- Formulario de login -->
+        <form action="../controladores/loginControlador.php" method="POST">
+            <div class="input-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+            </div>
 
-            <button type="submit">ENTRAR</button>
+            <button type="submit">Iniciar sesión</button>
+
+            <?php
+            if (isset($_GET['error'])) {
+                echo '<p class="error">' . htmlspecialchars($_GET['error']) . '</p>';
+            }
+            ?>
         </form>
 
-        <?php
-        // Mostrar mensaje de error si existe
-        if (isset($_GET['error'])) {
-            echo "<p style='color:red'>" . htmlspecialchars($_GET['error']) . "</p>";
-        }
-        ?>
+        <p>No tienes una cuenta? <a href="registro.php">Regístrate</a></p>
     </div>
-</body>
 
+</body>
 </html>

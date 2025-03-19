@@ -31,7 +31,7 @@
                 ?>
             </div>
         </div>
-        <form id="formulario-mensaje" method="POST" action="../controladores/guardar_mensaje.php">
+        <form id="formulario-mensaje" method="POST" action="../controladores/procesar_mensaje.php">
             <input type="text" id="usuario" name="usuario" placeholder="Tu nombre..." required>
             <input type="text" id="mensaje" name="mensaje" placeholder="Escribe tu testimonio aquí..." required>
             <button type="submit" class="boton-enviar">Enviar</button>

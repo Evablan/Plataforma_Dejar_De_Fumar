@@ -1,31 +1,37 @@
 <?php
-session_start();
-require_once '../modelos/config.php'; // Asegurar conexión a la base de datos
-require_once '../modelos/foroModelo.php'; // Incluir el modelo
+require_once "../modelos/config.php"; // Conectar a la BD
+header('Content-Type: application/json');
 
-// Crear una instancia del modelo
-$foro = new ForoModelo($conn);
-
-// Procesar solicitud POST para insertar mensaje
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    header('Content-Type: application/json'); // Asegurar respuesta JSON
-    $usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : "Anónimo";
-    $mensaje = $_POST['mensaje'] ?? '';
+    $usuario = $_POST['usuario'] ?? "Anónimo"; // Tomar el usuario
+    $mensaje = trim($_POST['mensaje'] ?? "");
 
     if (!empty($mensaje)) {
-        if ($foro->insertarMensaje($usuario, $mensaje)) {
-            echo json_encode(['status' => 'success', 'message' => 'Mensaje enviado']);
+        $sql = "INSERT INTO publicaciones (usuario, mensaje) VALUES (?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ss", $usuario, $mensaje);
+
+        if ($stmt->execute()) {
+            echo json_encode(["status" => "success"]);
         } else {
-            echo json_encode(['status' => 'error', 'message' => 'Error al enviar el mensaje']);
+            echo json_encode(["status" => "error", "message" => "No se pudo guardar"]);
         }
-    } else {
-        echo json_encode(['status' => 'error', 'message' => 'El mensaje no puede estar vacío']);
+
+        $stmt->close();
+        exit;
     }
 }
 
-// Procesar solicitud GET para obtener mensajes
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    header('Content-Type: application/json'); // Asegurar respuesta JSON
-    echo json_encode($foro->obtenerMensajes());
+// Si no es POST, devolver los mensajes
+$sql = "SELECT usuario, mensaje, fecha FROM publicaciones ORDER BY fecha DESC";
+$resultado = $conn->query($sql);
+
+$mensajes = [];
+
+while ($fila = $resultado->fetch_assoc()) {
+    $mensajes[] = $fila;
 }
+
+echo json_encode($mensajes);
+$conn->close();
 ?>

@@ -1,11 +1,11 @@
 <?php
-$servidor = "localhost";
+$servidor = "127.0.0.1";
 $usuario = "root";
 $clave = ""; // En XAMPP, la contraseña está vacía
 $base_datos = "plataforma";
 
 // Crear conexión
-$conn = new mysqli($servidor, $usuario, $clave, $base_datos);
+$conn = new mysqli($servidor, $usuario, $clave, $base_datos,3310);
 
 // Verificar conexión
 if ($conn->connect_error) {

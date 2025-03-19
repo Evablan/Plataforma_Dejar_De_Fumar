@@ -1,3 +1,10 @@
+<?php
+session_start(); // Iniciar sesión
+require_once "../modelos/config.php"; // Conexión a la base de datos
+
+$usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : '';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +20,6 @@
         <div id="contenedor-chat">
             <div id="mensajes">
                 <?php
-                require_once "../modelos/config.php"; // Conexión a la base de datos
-
                 $sql = "SELECT usuario, mensaje, fecha FROM publicaciones ORDER BY fecha DESC";
                 $resultado = $conn->query($sql);
 
@@ -32,7 +37,12 @@
             </div>
         </div>
         <form id="formulario-mensaje" method="POST" action="../controladores/procesar_mensaje.php">
-            <input type="text" id="usuario" name="usuario" placeholder="Tu nombre..." required>
+            <?php if (empty($usuario)) : ?>
+                <input type="text" id="usuario" name="usuario" placeholder="Tu nombre..." required>
+            <?php else : ?>
+                <input type="hidden" name="usuario" value="<?php echo htmlspecialchars($usuario); ?>">
+                <p>Escribiendo como: <strong><?php echo htmlspecialchars($usuario); ?></strong></p>
+            <?php endif; ?>
             <input type="text" id="mensaje" name="mensaje" placeholder="Escribe tu testimonio aquí..." required>
             <button type="submit" class="boton-enviar">Enviar</button>
             <a href="../vistas/dashboard.php" class="boton-foro">Volver al inicio</a>

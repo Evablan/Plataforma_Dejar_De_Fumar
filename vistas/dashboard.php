@@ -52,10 +52,6 @@ $usuario = $_SESSION['usuario'];*/
                 <i class="fa-solid fa-gift"></i>
             </div>
 
-
-            <div class="button-foro">
-                <button type="submit" class="button">Foro</button>
-            </div>
     </div>
 
     <div class="button-container">

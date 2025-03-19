@@ -1,16 +1,3 @@
-<?php
-session_start(); // Iniciar sesión
-
-// Verificar si el usuario está en sesión antes de usar la variable
-if (!isset($_SESSION['usuario'])) {
-    header("Location: login.php"); // Redirigir al login si no está autenticado
-    exit();
-}
-
-// Asignar el usuario a una variable segura
-$usuario = isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) : 'Usuario Desconocido';
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 

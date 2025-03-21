@@ -49,8 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sisssisssss", $nombre, $edad, $email, $contrasena, $tabaco, $cantidad, $dejar, $apoyo, $razon, $actividades, $salud);
 
     if ($stmt->execute()) {
+       
         session_start(); // Iniciar la sesión
-        $_SESSION['usuario'] = $nombre; // Guardar el nombre en la sesión
+        $_SESSION['usuario'] = $nombre; 
+        $_SESSION['usuario_id'] = $usuario_id;// Guardar el nombre en la sesión
         header("Location: ../vistas/login.php"); // Redirigir al login
         exit();
     } else {

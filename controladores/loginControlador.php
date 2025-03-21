@@ -18,8 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Si el usuario existe, verificar la contraseña
         $usuario = $result->fetch_assoc();
         if (password_verify($contrasena, $usuario['contrasena'])) {
-            // La contraseña es correcta, iniciar sesión
-            $_SESSION['usuario'] = $usuario['nombre']; // Guardar el nombre de usuario en la sesión
+            // ✅ Guardar datos en la sesión
+            $_SESSION['id_usuario'] = $usuario['id']; // Guardar ID del usuario en sesión
+            $_SESSION['usuario'] = $usuario['nombre']; // Guardar el nombre del usuario en sesión
+            
             header("Location: ../vistas/dashboard.php"); // Redirigir al dashboard
             exit();
         } else {

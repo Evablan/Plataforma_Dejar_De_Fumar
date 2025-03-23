@@ -1,11 +1,10 @@
 <?php
-session_start(); // Iniciar sesión
-require_once "../modelos/config.php"; // Conexión a la base de datos
+session_start(); 
+require_once "../modelos/config.php"; 
 
 $usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : '';
 $id_usuario = isset($_SESSION['id_usuario']) ? $_SESSION['id_usuario'] : null;
 
-// Obtener respuestas anteriores del usuario
 $respuestas = [];
 if ($id_usuario) {
     $sql = "SELECT pregunta, respuesta FROM respuestas WHERE usuario = ?";
@@ -33,7 +32,6 @@ if ($id_usuario) {
 
 <body>
     <div class="contenedor">
-        <!-- Ahorro (parte superior derecha) -->
         <label for="diasSinFumar">Días sin fumar:</label>
         <input type="number" id="diasSinFumar" min="0" value="0">
         <button onclick="calcularAhorro()">Calcular Ahorro</button>
@@ -42,14 +40,12 @@ if ($id_usuario) {
             <p id="totalAhorro">Cargando...</p>
         </div>
 
-        <!-- Imágenes (lado izquierdo) -->
         <div class="imagenes">
             <h2>Inspírate</h2>
             <p>Sube una imagen que represente tu meta de este año</p>
             <input type="file">
         </div>
 
-        <!-- Preguntas (lado derecho, parte inferior) -->
         <div class="preguntas">
             <h2>Reflexiona sobre tu proceso</h2>
             <form id="formPreguntas" method="POST" action="../controladores/preguntaControlador.php">
@@ -80,7 +76,6 @@ if ($id_usuario) {
         </div>
     </div>
 
-    <!-- Scripts de funcionalidad -->
     <script src="../assets/js/calculadora.js"></script>
 </body>
 

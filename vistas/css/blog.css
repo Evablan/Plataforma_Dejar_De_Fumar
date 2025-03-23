@@ -21,7 +21,7 @@ body {
     margin-top: 20px;
 }
 
-/* Ahorro (parte superior derecha) */
+
 .ahorro {
     grid-area: ahorro;
     text-align: center;
@@ -34,7 +34,7 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Imágenes (lado izquierdo) */
+
 .imagenes {
     grid-area: imagenes;
     background: #FFA07A;
@@ -52,7 +52,6 @@ body {
     margin-top: 10px;
 }
 
-/* Preguntas (lado derecho inferior) */
 .preguntas {
     grid-area: preguntas;
     display: flex;
@@ -67,11 +66,9 @@ body {
 .preguntas label {
     font-weight: bold;
     color: #B19CD9;
-    /*Modelo claro para los títulos de preguntas */
 }
 
 
-/* Estilos para los campos de texto */
 .preguntas textarea {
     width: 100%;
     height: 50px;
@@ -82,21 +79,20 @@ body {
     background-color: #f7f7f7;
 }
 
-/* Botón de guardar reflexión */
 .boton-guardar {
     background-color: #8ED081;
-    /*Verde claro */
+   
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* indica que es clickable */
+  
 }
 
 .boton-guardar:hover {
     background-color: #76b36a;
-    /*Oscurece ligeramente al pasar el mouse */
+    
 }
 
 .ver-respuestas {

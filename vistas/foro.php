@@ -1,6 +1,6 @@
 <?php
-session_start(); // Iniciar sesión
-require_once "../modelos/config.php"; // Conexión a la base de datos
+session_start(); 
+require_once "../modelos/config.php"; 
 
 $usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : '';
 ?>

@@ -1,4 +1,4 @@
-/* -------------------- BODY -------------------- */
+
 body {
     background-color: lightblue;
     margin: 0;
@@ -10,19 +10,15 @@ body {
     justify-content: center;
 }
 
-/* -------------------- NAV (MENÚ) -------------------- */
 nav {
     position: fixed;
-    /* Fija el menú en la parte superior */
     top: 0;
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
-    /* Fondo con transparencia */
     padding: 15px 0;
     text-align: center;
     z-index: 1000;
-    /* Asegura que esté por encima del contenido */
 }
 
 nav ul {
@@ -31,9 +27,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    /* Centra los elementos horizontalmente */
     gap: 20px;
-    /* Espaciado entre los enlaces */
 }
 
 nav ul li {
@@ -56,13 +50,11 @@ nav ul li i {
     margin-right: 5px;
 }
 
-/* -------------------- HEADER -------------------- */
 header {
     background: url("../../assets/img/proyecto.jpg") no-repeat center center;
     background-size: cover;
     width: 100%;
     min-height: 100vh;
-    /* Para asegurar que cubra la pantalla */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,18 +71,14 @@ header::before {
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.5);
-    /* Capa transparente */
 }
 
 a img {
     width: 30px;
-    /* Ajusta el tamaño según lo necesites */
     height: auto;
     cursor: pointer;
-    /* Muestra la manito al pasar el mouse */
 }
 
-/* -------------------- TÍTULO PRINCIPAL -------------------- */
 h1 {
     position: absolute;
     top: 10%;
@@ -100,7 +88,6 @@ h1 {
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     color: #8B5A2B;
-    /* Marrón claro */
 }
 
 h1 span {
@@ -115,31 +102,20 @@ h1 span.blue {
     color: #00AEEF;
 }
 
-/* -------------------- FOOTER -------------------- */
 .footer {
     background-color: #a7d2e3;
-    /* Color de fondo (ajústalo si es necesario) */
     height: 10px;
-    /* Altura reducida del footer */
     display: flex;
-    /* Para alinear los elementos horizontalmente */
     flex-direction: column;
-    /* Mantiene el contenido centrado */
     justify-content: center;
-    /* Centra el contenido verticalmente */
     align-items: center;
-    /* Centra los elementos horizontalmente */
     padding: 5px 0;
-    /* Reduce el espacio interior */
     margin-top: 20px;
-    /* Opcional: separa el footer del contenido superior */
 }
 
 .footer p {
     font-size: 12px;
-    /*Tamaño de texto más pequeño */
     margin: 0;
-    /*Elimina espacios extra */
 }
 
 .social-icons {
@@ -164,18 +140,13 @@ h1 span.blue {
 
 .footer-links a {
     text-decoration: none;
-    /* Quita el subrayado */
     color: blue;
-    /* Color de los enlaces (ajústalo si es necesario) */
     font-size: 12px;
-    /* Tamaño de fuente reducido */
 }
 
-/*------- FORMULARIO DE REGISTRO -------*/
 
 body {
     background-color: #e3f2fd;
-    /* Color de fondo similar al diseño */
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: space-between;
@@ -189,11 +160,8 @@ body {
 
 .form-container {
     width: 80%;
-    /*Ancho del formulario */
     max-width: 900px;
-    /*Limita el tamaño máximo */
     margin: 0 auto;
-    /*Centra el formulario */
     background-color: white;
     padding: 30px;
     border-radius: 15px;
@@ -201,13 +169,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* Distribuye los elementos dentro */
     align-items: center;
-    /* Centra los elementos horizontalmente */
     min-height: auto;
-    /* Asegura espacio suficiente para el botón */
     position: relative;
-    /* Permite posicionar el botón correctamente */
 
     height: auto;
 }
@@ -243,7 +207,6 @@ form {
 fieldset {
     border: none;
     width: 100%;
-    /* Ajusta las secciones en dos columnas */
     font-size: 15px;
     margin-top: 5px;
     padding-top: 10px;
@@ -276,11 +239,8 @@ textarea {
 .button-container {
     display: flex;
     justify-content: flex-end;
-    /* Lo mueve a la derecha */
     width: 100%;
-    /* Que ocupe todo el ancho */
     margin-top: auto;
-    /* Empuja el botón hacia abajo */
 }
 
 button {
@@ -298,13 +258,11 @@ button:hover {
     background-color: #006064;
 }
 
-/*------------- BOTÓN DE REEDIRECCIÓN A LA PÁGINA DE INICIO (index)--------*/
 
 .return-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #008FA5;
-    /* Color similar al de tu diseño */
     color: white;
     text-decoration: none;
     border-radius: 5px;

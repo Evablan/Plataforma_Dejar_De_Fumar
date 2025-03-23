@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php'; // Asegurar conexión en caso de acceso directo al modelo
+require_once 'config.php'; 
 
 class ForoModelo {
     private $conn;
@@ -8,7 +8,6 @@ class ForoModelo {
         $this->conn = $conn;
     }
 
-    // Método para insertar un mensaje
     public function insertarMensaje($usuario, $mensaje) {
         $sql = "INSERT INTO publicaciones (usuario, mensaje, fecha) VALUES (?, ?, NOW())";
         $stmt = $this->conn->prepare($sql);
@@ -16,7 +15,6 @@ class ForoModelo {
         return $stmt->execute();
     }
 
-    // Método para obtener los mensajes
     public function obtenerMensajes() {
         $sql = "SELECT usuario, mensaje, fecha FROM publicaciones ORDER BY fecha DESC";
         $result = $this->conn->query($sql);

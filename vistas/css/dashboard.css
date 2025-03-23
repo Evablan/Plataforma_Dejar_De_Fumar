@@ -52,13 +52,9 @@ body {
     grid-area: botones;
     display: flex;
     justify-content: flex-start;
-    /* botones hacia la izquierda */
     align-self: end;
-    /* botones hacia abajo */
     padding-left: 20px;
-    /* separa un poco de la izquierda */
     padding-bottom: 20px;
-    /* separa un poco del borde inferior */
     gap: 15px;
 }
 

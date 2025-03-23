@@ -1,5 +1,5 @@
 <?php
-require_once "config.php"; // Archivo de conexión a la base de datos
+require_once "config.php"; 
 
 class Pregunta {
     private $conn;

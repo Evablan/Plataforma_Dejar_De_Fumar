@@ -1,13 +1,11 @@
 <?php
-session_start(); // Iniciar sesión
+session_start();
 
-// Verificar si el usuario está en sesión antes de usar la variable
 if (!isset($_SESSION['usuario'])) {
-    header("Location: login.php"); // Redirigir al login si no está autenticado
+    header("Location: login.php"); 
     exit();
 }
 
-// Asignar el usuario a una variable segura
 $usuario = isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) : 'Usuario Desconocido';
 ?>
 
@@ -18,7 +16,7 @@ $usuario = isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de motivación y seguimiento</title>
-    <link rel="stylesheet" href="../vistas/css/dashboard.css"> <!-- Estilo de dashboard -->
+    <link rel="stylesheet" href="../vistas/css/dashboard.css">
 </head>
 
 <body>
@@ -29,7 +27,7 @@ $usuario = isset($_SESSION['usuario']) ? htmlspecialchars($_SESSION['usuario']) 
         <div class="button-container">
             <a href="foro.php" class="button">Foro</a>
             <a href="blog.php" class="button">Blog</a>
-            <a href="../controladores/cerrar_sesion.php" class="button cerrar">Cerrar sesión</a> <!-- Botón de cerrar sesión -->
+            <a href="../controladores/cerrar_sesion.php" class="button cerrar">Cerrar sesión</a> 
         </div>
 
 

@@ -1,4 +1,3 @@
-/* -------------------- LOGIN -------------------- */
 form {
     display: flex;
     flex-direction: column;
@@ -11,7 +10,6 @@ form {
 .login-input {
     width: 80%;
     max-width: 300px;
-    /* Evita que se haga demasiado grande en pantallas anchas */
     height: 10px;
     border-radius: 25px;
     border: none;
@@ -25,21 +23,16 @@ form {
 body {
     background-color: #008FA5;
     text-align: center;
-    /* Esto centra todo el contenido de la página */
 }
 
 .inicio h1 {
     font-family: 'normal', sans-serif;
-    /*Cambia la tipografía */
     font-size: 36px;
-    /*Tamaño de la fuente */
     font-weight: bold;
     /* Negrita */
     color: white;
     text-transform: uppercase;
-    /* Convertir a mayúsculas */
     letter-spacing: 2px;
-    /*Espaciado entre las letras */
 }
 
 .login-input {
@@ -49,70 +42,48 @@ body {
 
 .button {
     background-color: green;
-    /* Color de fondo del botón */
     color: white;
-    /* Color del texto blanco*/
     padding: 12px 20px;
-    /* Espaciado interno para hacer el botón más grande y fácil de usar */
     font-size: 16px;
-    /* Tamaño del texto */
     border: none;
-    /* Eliminar bordes predeterminados del botón*/
     border-radius: 25px;
-    /* Redondea las esquinas del botón para que tenga un diseño más moderno*/
     cursor: pointer;
-    /* Cambio de cursor al pasar el ratón */
     width: 100%;
-    /* Hace que el botón ocupe todo el ancho disponible en su contenedor */
     transition: background 0.3s;
-    /* Agrega una transición suave cuando se cambia el color de fondo */
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .button:hover {
     background-color: #27ae60;
-    /*Un verde más oscuro */
     box-shadow: 0px 6px 15px rgba(0, 128, 0, 0.4);
-    /* Mayor profundidad */
 }
 
-/* Efecto de presión cuando se hace clic */
 .btn:active {
     background-color: #1e8449;
-    /* Verde aún más oscuro */
     box-shadow: 0px 2px 5px rgba(0, 128, 0, 0.5);
-    /* Reduce la sombra */
     transform: translateY(2px);
-    /* Efecto de "hundirse" al hacer clic */
 }
 
 .user-avatar {
     display: block;
     margin: 10px auto;
-    /* Centra la imagen */
     width: 100px;
-    /* Ajusta el tamaño */
     height: 100px;
     border-radius: 50%;
-    /* Hace la imagen circular */
     border: 4px solid #008FA5;
-    /* Color de borde */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    /* Efecto de sombra */
 }
 
 .input-container {
     position: relative;
     width: 100%;
     margin: auto;
-    /* coincidirá con tu input actual */
 }
 
 .input-container .login-input {
     width: 100%;
     padding-right: 40px;
     box-sizing: border-box;
-    /* deja espacio para el icono del ojo */
 }
 
 .toggle-password {

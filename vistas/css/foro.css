@@ -7,7 +7,6 @@ body {
 
 #mensajes {
 
-    /*estilos aqui*/
 
     height: 400px;
     overflow-y: auto;
@@ -50,13 +49,12 @@ body {
 
 }
 
-/*------------- BOTÓN DE REEDIRECCIÓN A LA PÁGINA DE INICIO (index)--------*/
+
 
 .boton-foro {
     display: inline-block;
     padding: 10px 20px;
     background-color: #008FA5;
-    /* Color similar al de tu diseño */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -72,7 +70,6 @@ body {
     display: inline-block;
     padding: 10px 20px;
     background-color: #008FA5;
-    /* Color similar al de tu diseño */
     color: white;
     text-decoration: none;
     border-radius: 5px;

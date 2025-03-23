@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #eef5ff;
     color: #333;
     margin: 0;
     padding: 0;
@@ -27,19 +27,29 @@ body {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    background: #ffffff;
+    background: #6EC1E4;
+    color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Imágenes (lado izquierdo) */
 .imagenes {
     grid-area: imagenes;
-    background: #ffffff;
+    background: #FFA07A;
+    color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.imagenes input [type="file"] {
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
 }
 
 /* Preguntas (lado derecho inferior) */
@@ -51,8 +61,15 @@ body {
     background: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.preguntas label {
+    font-weight: bold;
+    color: #B19CD9;
+    /*Modelo claro para los títulos de preguntas */
+}
+
 
 /* Estilos para los campos de texto */
 .preguntas textarea {
@@ -62,13 +79,33 @@ body {
     border-radius: 5px;
     border: 1px solid #ccc;
     resize: none;
+    background-color: #f7f7f7;
 }
 
 /* Botón de guardar reflexión */
 .boton-guardar {
-    background-color: #007bff;
+    background-color: #8ED081;
+    /*Verde claro */
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    /* indica que es clickable */
+}
+
+.boton-guardar:hover {
+    background-color: #76b36a;
+    /*Oscurece ligeramente al pasar el mouse */
+}
+
+.ver-respuestas {
+    color: #007bff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.ver-respuestas:hover {
+    text-decoration: underline;
 }

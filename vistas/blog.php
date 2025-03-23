@@ -8,7 +8,7 @@ $id_usuario = isset($_SESSION['id_usuario']) ? $_SESSION['id_usuario'] : null;
 // Obtener respuestas anteriores del usuario
 $respuestas = [];
 if ($id_usuario) {
-    $sql = "SELECT pregunta, respuesta FROM respuestas WHERE id_usuario = ?";
+    $sql = "SELECT pregunta, respuesta FROM respuestas WHERE usuario = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id_usuario);
     $stmt->execute();
@@ -83,3 +83,9 @@ if ($id_usuario) {
     <!-- Scripts de funcionalidad -->
     <script src="../assets/js/calculadora.js"></script>
 </body>
+
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 23ad979dd7efd80d1c889f5ccba6d173490ac7aa

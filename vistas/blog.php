@@ -1,6 +1,7 @@
 <?php
 session_start(); 
 require_once "../modelos/config.php"; 
+require_once "../modelos/img.php";
 
 $usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : '';
 $id_usuario = isset($_SESSION['id_usuario']) ? $_SESSION['id_usuario'] : null;
@@ -16,6 +17,12 @@ if ($id_usuario) {
     while ($fila = $resultado->fetch_assoc()) {
         $respuestas[$fila['pregunta']] = $fila['respuesta'];
     }
+
+    // Obtener imágenes del usuario
+    $imagenModel = new Imagen($conn);
+    $imagenes = $imagenModel->obtenerImagenes($id_usuario);
+} else {
+    $imagenes = [];
 }
 ?>
 
@@ -26,7 +33,6 @@ if ($id_usuario) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-
     <link rel="stylesheet" href="css/blog.css">
 </head>
 
@@ -40,12 +46,33 @@ if ($id_usuario) {
             <p id="totalAhorro">Cargando...</p>
         </div>
 
+        <!-- Sección de imágenes -->
         <div class="imagenes">
             <h2>Inspírate</h2>
             <p>Sube una imagen que represente tu meta de este año</p>
-            <input type="file">
+            
+            <!-- Formulario para subir imágenes -->
+            <form action="../controladores/imagenControlador.php" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id_usuario" value="<?php echo $id_usuario; ?>">
+                <input type="file" name="imagen" required>
+                <button type="submit">Subir Imagen</button>
+            </form>
+
+            <!-- Galería de imágenes -->
+            <h3>Imágenes Subidas</h3>
+            <div class="galeria">
+                <?php if (!empty($imagenes)): ?>
+                    <?php foreach ($imagenes as $img): ?>
+                        <img src="/Plataforma_Dejar_De_Fumar/<?php echo htmlspecialchars($img['ruta']); ?>" width="350" alt="Imagen subida">
+
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No hay imágenes subidas aún.</p>
+                <?php endif; ?>
+            </div>
         </div>
 
+        <!-- Sección de preguntas y reflexiones -->
         <div class="preguntas">
             <h2>Reflexiona sobre tu proceso</h2>
             <form id="formPreguntas" method="POST" action="../controladores/preguntaControlador.php">
@@ -80,6 +107,4 @@ if ($id_usuario) {
     <script src="../assets/js/calculadora.js"></script>
 </body>
 
-
 </html>
-

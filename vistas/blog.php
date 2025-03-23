@@ -73,14 +73,13 @@ if ($id_usuario) {
             </form>
             <br>
             <a href="historial_respuestas.php" class="ver-respuestas">Ver respuestas anteriores</a>
+            <a href="../vistas/dashboard.php" class="boton-blog">Volver al inicio</a>
         </div>
     </div>
 
     <script src="../assets/js/calculadora.js"></script>
 </body>
 
-<<<<<<< HEAD
+
 </html>
-=======
-</html>
->>>>>>> 23ad979dd7efd80d1c889f5ccba6d173490ac7aa
+

@@ -18,7 +18,7 @@ $respuestas = $preguntaModelo->obtenerRespuestasPorUsuario($usuario);
 <body>
     <div class="contenedor-foro">
         <h2>Historial de Respuestas</h2>
-        <a href="formulario_preguntas.php">Responder otra vez</a>
+        <a href="../vistas/blog.php" class="boton-blog">Volver al Blog</a>
         <ul>
             <?php if (!empty($respuestas)) : ?>
                 <?php foreach ($respuestas as $respuesta) : ?>

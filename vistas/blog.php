@@ -27,6 +27,7 @@ if ($id_usuario) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+
     <link rel="stylesheet" href="css/blog.css">
 </head>
 
@@ -82,5 +83,3 @@ if ($id_usuario) {
     <!-- Scripts de funcionalidad -->
     <script src="../assets/js/calculadora.js"></script>
 </body>
-
-</html>

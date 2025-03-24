@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F9FF;
+    /* Fondo azul claro suave */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contenedor-foro {
+    background-color: #FFFFFF;
+    /* Fondo blanco para claridad */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+}
+
+.contenedor-foro h2 {
+    color: #6EC1E4;
+    /* Azul claro acorde al proyecto */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.boton-blog {
+    display: inline-block;
+    background-color: #8ED081;
+    /* Verde claro motivacional */
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-blog:hover {
+    background-color: #7AB870;
+    /* Verde más oscuro al pasar mouse */
+}
+
+.contenedor-foro ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contenedor-foro li {
+    background-color: #FAFAFA;
+    /* Gris claro para contraste suave */
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #6EC1E4;
+    /* Barra lateral azul */
+}
+
+.contenedor-foro li strong {
+    color: #6EC1E4;
+}
+
+.contenedor-foro li em {
+    font-size: 0.9em;
+    color: #888;
+    display: block;
+    margin-top: 5px;
+}
+
+.contenedor-foro p {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}

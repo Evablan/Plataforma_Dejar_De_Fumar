@@ -9,12 +9,14 @@ $respuestas = $preguntaModelo->obtenerRespuestasPorUsuario($usuario);
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial de Respuestas</title>
-    <link rel="stylesheet" href="../css/foro.css">
+    <link rel="stylesheet" href="../vistas/css/historial_respuestas.css">
 </head>
+
 <body>
     <div class="contenedor-foro">
         <h2>Historial de Respuestas</h2>
@@ -34,4 +36,5 @@ $respuestas = $preguntaModelo->obtenerRespuestasPorUsuario($usuario);
         </ul>
     </div>
 </body>
+
 </html>

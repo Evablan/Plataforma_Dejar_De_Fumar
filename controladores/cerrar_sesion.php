@@ -1,6 +1,6 @@
 <?php
 session_start();
-session_destroy(); // Destruir todas las sesiones
-header("Location: ../vistas/login.php"); // Redirigir al login
+session_destroy(); 
+header("Location: ../vistas/login.php"); 
 exit();
 ?>

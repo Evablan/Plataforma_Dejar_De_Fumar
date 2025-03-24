@@ -1,9 +1,9 @@
 <?php
-require_once "../modelos/config.php"; // Conectar a la BD
+require_once "../modelos/config.php"; 
 header('Content-Type: application/json');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario = $_POST['usuario'] ?? "Anónimo"; // Tomar el usuario
+    $usuario = $_POST['usuario'] ?? "Anónimo"; 
     $mensaje = trim($_POST['mensaje'] ?? "");
 
     if (!empty($mensaje)) {
@@ -22,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Si no es POST, devolver los mensajes
 $sql = "SELECT usuario, mensaje, fecha FROM publicaciones ORDER BY fecha DESC";
 $resultado = $conn->query($sql);
 

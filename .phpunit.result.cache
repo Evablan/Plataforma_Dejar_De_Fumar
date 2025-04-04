@@ -1,1 +1,1 @@
-{"version":1,"defects":{"LoginControladorTest::testLoginConCredencialesIncorrectas":4},"times":{"LoginControladorTest::testLoginConCredencialesIncorrectas":0.023}}
+{"version":1,"defects":{"LoginControladorTest::testLoginConCredencialesIncorrectas":4,"LoginVistaTest::testContieneFormularioLogin":4},"times":{"LoginControladorTest::testLoginConCredencialesIncorrectas":0.001,"LoginVistaTest::testContieneFormularioLogin":0.001}}

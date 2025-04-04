@@ -31,7 +31,7 @@
             ?>
         </form>
 
-        <p>No tienes una cuenta? <a href="registro.php">Regístrate</a></p>
+        <p>¿No tienes una cuenta? <a href="registro.php">Regístrate</a></p>
     </div>
 
 </body>

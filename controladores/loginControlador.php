@@ -1,10 +1,12 @@
 <?php
 session_start(); 
 require_once '../modelos/config.php'; 
+require_once '../lib/seguridad.php';
+$seg = new Seguridad();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $contrasena = $_POST['contrasena'];
+    $email =$seg ->limpiar( $_POST['email']);
+    $contrasena = $seg ->limpiar( $_POST['contrasena']);
 
     $sql = "SELECT id, nombre, contrasena FROM usuarios WHERE email = ?";
     $stmt = $conn->prepare($sql);

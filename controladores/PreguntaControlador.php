@@ -7,8 +7,8 @@ $usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach ($_POST as $campo => $respuesta) {
-        if (strpos($campo, 'pregunta') === 0 && !empty($respuesta)) { // Verifica que el campo es una pregunta y tiene respuesta
-            $pregunta = str_replace('_', ' ', $campo); // Transforma el nombre del campo en una pregunta
+        if (strpos($campo, 'pregunta') === 0 && !empty($respuesta)) { 
+            $pregunta = str_replace('_', ' ', $campo); 
             $preguntaModelo->guardarRespuesta($usuario, $pregunta, $respuesta);
         }
     }

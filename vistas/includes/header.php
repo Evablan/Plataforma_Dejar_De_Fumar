@@ -2,7 +2,7 @@
     <nav>
         <ul>
             <li><a href="vistas/quienes_somos.php"><i class="fa-solid fa-users"></i>Quiénes Somos</a></li>
-            <li><a href="Contacto.php"><i class="fa-solid fa-envelope"></i><span style="color:pink;">Contacto</span></a></li>
+            <li><a href="vistas/contacto.php"><i class="fa-solid fa-envelope"></i><span style="color:pink;">Contacto</span></a></li>
             <li><a href="vistas/registro.php"> <i class="fa-solid fa-user-plus"></i>Registrate</a></li>
 
             <a href="vistas/login.php">

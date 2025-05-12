@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Quiénes Somos</title>
-  <link rel="stylesheet" href="vistas/css/quienes_somos.css">
+  <link rel="stylesheet" href="../vistas/css/quienes_somos.css">
 </head>
 <body>
 <section class="descripcion-proyecto">

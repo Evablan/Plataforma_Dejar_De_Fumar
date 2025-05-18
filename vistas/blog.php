@@ -1,6 +1,6 @@
 <?php
-session_start(); 
-require_once "../modelos/config.php"; 
+session_start();
+require_once "../modelos/config.php";
 require_once "../modelos/img.php";
 
 $usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : '';
@@ -50,7 +50,7 @@ if ($id_usuario) {
         <div class="imagenes">
             <h2>Inspírate</h2>
             <p>Sube una imagen que represente tu meta de este año</p>
-            
+
             <!-- Formulario para subir imágenes -->
             <form action="../controladores/imagenControlador.php" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="id_usuario" value="<?php echo $id_usuario; ?>">

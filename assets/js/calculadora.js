@@ -1,3 +1,12 @@
+document.addEventListener("DOMContentLoaded", function () {
+    calcularAhorro(); 
+
+    let diasInput = document.getElementById("diasSinFumar");
+    if (diasInput) {
+        diasInput.addEventListener("input", calcularAhorro);
+    }
+});
+
 function calcularAhorro() {
     let cigarrillosPorDia = localStorage.getItem("cigarrillosPorDia") || 5;
     let costoPorCigarrillo = 0.50;
@@ -5,12 +14,7 @@ function calcularAhorro() {
     let diasInput = document.getElementById("diasSinFumar");
     let diasSinFumar = diasInput ? parseInt(diasInput.value) || 0 : 0;
 
-    let usuario_id = sessionStorage.getItem("usuario_id") || localStorage.getItem("usuario_id");
-
-    // Clave única por usuario
-    let ahorroKey = `ahorroTotal_${usuario_id}`;
-
-    let ahorroAnterior = parseFloat(localStorage.getItem(ahorroKey)) || 0;
+    let ahorroAnterior = parseFloat(localStorage.getItem("ahorroTotal")) || 0;
 
     let ahorroNuevo = diasSinFumar * cigarrillosPorDia * costoPorCigarrillo;
 
@@ -35,10 +39,29 @@ function calcularAhorro() {
         progresoAhorro.value = progreso;
     }
 
-    // Guardar ahorro individual por usuario
-    localStorage.setItem(ahorroKey, ahorroTotal);
+    localStorage.setItem("ahorroTotal", ahorroTotal);
 
+    let usuario_id = sessionStorage.getItem("usuario_id") || localStorage.getItem("usuario_id");
     if (usuario_id) {
         guardarAhorro(usuario_id, ahorroTotal); 
     }
+}
+
+function guardarAhorro(usuario_id, ahorro_diario) {
+    fetch("../controladores/guardarAhorro.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ usuario_id, ahorro_diario }), 
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            console.log("Ahorro guardado correctamente en la BD.");
+        } else {
+            console.error("Error al guardar el ahorro:", data.message);
+        }
+    })
+    .catch(error => console.error("Error:", error));
 }

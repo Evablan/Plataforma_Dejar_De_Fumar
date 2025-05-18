@@ -48,7 +48,7 @@
                     <label for="tabaco">¿Cuántos cigarros fumas al día?:</label>
                     <input type="number" id="tabaco" name="tabaco" required><br><br>
 
-                    <label for="cantidad">¿Desde hace cuánto tiempo que fumas?</label>
+                    <label for="cantidad">¿Desde hace cuánto tiempo que fumas? Responder en años</label>
                     <input type="number" id="cantidad" name="cantidad" min="1" max="99" required><br><br>
 
                     <label for="dejar">¿Has intentado dejar de fumar antes?</label>

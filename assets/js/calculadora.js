@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function calcularAhorro() {
-    let cigarrillosPorDia = localStorage.getItem("cigarrillosPorDia") || 10;
+    let cigarrillosPorDia = localStorage.getItem("cigarrillosPorDia") || 5;
     let costoPorCigarrillo = 0.50;
 
     let diasInput = document.getElementById("diasSinFumar");
